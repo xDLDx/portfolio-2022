@@ -621,6 +621,21 @@ input[type=submit]{
     .menu{
         transition: 0s;
     }
+    .parallax {
+        /* The image used */
+        background-image: none;
+        background-color: black;
+        /* Full height */
+        min-height: 100%;
+      
+        /* Create the parallax scrolling effect */
+        position: relative;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        color:white;
+      }
 }
 
 
