@@ -1,0 +1,383 @@
+html {
+    background-color: black;
+    font-size: 1em;
+    color: white;
+    padding: 8px;
+    font-family: "Questrial", sans-serif;
+}
+
+footer {
+    text-align: center;
+}
+
+.cover,
+h1 {
+   width:600px;
+    text-align: center;
+}
+
+a.skip {
+    position: absolute;
+    left: -100000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+a.skip:focus {
+    height: auto;
+    width: auto;
+    left: 1px;
+    position: static;
+}
+
+h1 {
+    font-size: 3em;
+    max-width: 70%;
+    margin: 40px auto;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 32px 8px;
+}
+
+nav ul {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+}
+
+nav li {
+    padding: 12px;
+
+}
+
+
+
+a {
+    color: white;
+    padding: 14px, 25px;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+
+
+}
+
+.active {
+    color: #000000;
+    font-size: 18px;
+    background-color: green;
+    font-weight: bold;
+    border: 3px solid white;
+}
+
+.intro {
+    display: flex;
+    width: 360px;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+img {
+    background-color: white;
+    border: solid grey;
+}
+
+
+/* main div:nth-child(odd) img:hover {
+    filter: grayscale();
+    border: dashed;
+} */
+
+/* main {
+    
+    display: grid;
+    gap:2em;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+main>*, main img{
+    max-width:70%;
+    place-self:center;
+    margin: 0 auto; 
+}*/
+/* .grid {
+       display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr minmax(200px, 600px);
+    gap: 2em;
+    grid-auto-columns:600px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 44px;
+    justify-items: center;
+    justify-content: start;
+    align-items: stretch;
+    grid-auto-rows: 500px;
+    align-content: center;
+} */
+.education {
+    color: var(--contentcolor);
+    text-align: right;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 15px;
+}
+
+.discrip {
+    padding: 8px;
+    display: flex;
+    width: 360px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 15px;
+}
+
+
+
+.home {
+    color: lightgreen;
+    background-image: url("../images/DLD.png");
+    background-size: contain;
+}
+
+/* .bcmain{
+    margin: 2em;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2em;
+
+} */
+.bcmain h2 {
+    font-size: 2em;
+    text-transform: capitalize;
+
+}
+
+span {
+    display: inline-block;
+    width: 50px;
+    height: 5px;
+    background-color: var(--contentcolor);
+
+}
+.bccontent{
+    display:flex;
+ 
+}
+.bccontent div {
+    flex:0 0 200px;
+    background-color: white;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 30px; 
+    color:black;
+
+}
+.bccontent div img{
+   max-width:100%;
+   height:auto;
+}
+.bccontent div
+
+/* .bccontent div{
+
+    text-align:center;
+    padding: 10px;
+    margin: 10px;
+    outline:2px solid var(--contentcolor);
+    flex-wrap:wrap;
+
+}
+.bccontent>*, h2, .bccontent div >*{
+    align-self: center;
+    margin: 0 auto
+} */
+/* @media only screen and (max-width:749px) {
+ .bccontent div p,.plcps p{
+        visibility: hidden;
+        position: absolute;
+        left: -100000px;
+    } 
+}*/
+
+
+.flip-card {
+    background-color: transparent;
+    width: 250px;
+    height: 180px;
+    perspective: 1000px;
+    /* Remove this if you don't want the 3D effect */
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+
+.flip-card:hover .flip-card-inner,
+.flip-card:focus-within .flip-card-inner,
+.flip-card:active .flip-card-inner,
+.flip-card:focus .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    /* Safari */
+    backface-visibility: hidden;
+}
+
+
+.flip-card-front {
+    background-color: green;
+    color: black;
+}
+
+.flip-card-back {
+    background-color: green;
+    color: var(--contentcolor);
+    transform: rotateY(180deg);
+}
+
+:root {
+    --contentcolor: green;
+}
+
+#animation {
+    border-radius: 50%;
+    animation-duration: 3s;
+    animation-name: loaded;
+}
+
+@keyframes loaded {
+    from {
+        opacity: 0.0;
+        margin-top: 50px;
+    }
+
+    to {
+        opacity: 1.0;
+        margin-top: 0px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+
+    /* .bccontent>*{
+        align-self: stretch;
+    } */
+    html {
+        font-size: 1.1em;
+    }
+
+    body {
+        font-family: unset;
+    }
+
+    .home {
+        color: white;
+        background-image: none;
+    }
+
+    #animation {
+        animation-duration: 0s;
+        animation-name: none;
+    }
+
+    .grid {
+        grid-auto-flow: column;
+
+    }
+
+    /* .bccontent{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        gap: 2em;
+    } */
+
+
+    /* .bccontent div{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        max-width: 40%;
+        text-align:left;
+    } 
+
+    .bccontent div p, .plcps p{
+         visibility: visible;
+    } */
+
+}
+
+@media only screen and (min-width: 750px) {
+    html {
+        font-size: 1em;
+    }
+
+    body {
+        font-family: unset;
+    }
+
+    .home {
+        color: white;
+        background-image: none;
+    }
+
+    #animation {
+        animation-duration: 0s;
+        animation-name: none;
+    }
+
+    /* .bccontent{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        gap: 2em;
+    }
+       
+    .bccontent div:nth-child(odd){
+        max-width: 80%;
+        display: flex;
+        flex-direction:row;
+        justify-content: space-evenly;
+        text-align:left;
+    } 
+    .bccontent div:nth-child(even){
+        max-width: 80%;
+        display: flex;
+        flex-direction:row-reverse;
+        justify-content: space-evenly;
+        text-align:right;
+    } 
+    .bccontent div>*{
+        max-width: 45%;
+    }
+    .bccontent div p, .plcps p{
+         visibility: visible; 
+    }*/
+
+}

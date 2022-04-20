@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+	<!-- You do not need to make any changes to this file, but
+	you should still review the tags to make sure that you
+	are familiar with them. -->
+
+<html lang="en" class="findme">
+<!-- All of the meta data for the page belongs in the header tag -->
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Link to the favicon image -->
+	<link rel="icon" href="images/favicon.ico">
+	<!-- Link to the reset file -->
+	<link rel="stylesheet" href="css/html5reset.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Questrial">
+	<script src="https://kit.fontawesome.com/3bc74cd8a7.js" crossorigin="anonymous"></script>
+	<title>Find Me</title>
+</head>
+
+<!-- All of the visible code in the page belongs in the body tag -->
+<body>
+	<!-- Header is a sematic tag page that aids readability -->
+	<a class="skip" href="#main">Skip to Main Content</a>
+	<header>
+		<!-- Nav is a sematic tag page that aids accessibility -->
+		<nav>
+			<ul class="menu">
+				<li class="menuItem"><a href="index.html">About Me</a></li>
+				<li class="menuItem"><a href="createdbyme.html">Created By Me</a></li>
+				<li class="menuItem"><a href="bookcover.html">Literati</a></li>
+				<li class="menuItem"><a href="photography.html">Photography</a></li>
+				<li class="active menuItem"><a href="findme.html">Find Me</a></li>
+			</ul>	
+			<ul class="navibar">
+				<li ><a href="index.html">About Me</a></li>
+				<li><a href="createdbyme.html">Created By Me</a></li>
+				<li><a href="bookcover.html">Literati</a></li>
+				<li><a href="photography.html">Photography</a></li>
+				<li  class="activenavibar"><a href="findme.html">Find Me</a></li>
+		</nav>
+		<button class="hamburger">
+			<i class="menuIcon material-icons">menu</i>
+			<i class="closeIcon material-icons">close</i>
+		</button>
+		<!-- The h1 is a semantic tag that aids accessibility -->
+		<h1 id="main">Find Me</h1>
+
+	</header>
+
+	<!-- Every page should have a main tag for accessibility -->
+	<main id="main">
+		<div class="deph">
+		<div class="flip-card">
+			<div class="flip-card-inner">
+					<div class="flip-card-front">
+						<img src="images/visby.jpeg" alt="a guy sit in front of the sea in visby" />
+					</div>
+				<div class="flip-card-back">
+					<h2>Hey!</h2>
+					<h2>Who's your favourite designer?</h2>	
+					
+				</div>
+				<a href="#">this is a flip card</a>
+			</div>
+		</div>
+
+		 <div class="intern" >
+		   <p>My Design Philosophy: First Principle Design Thinking:“A problem well-stated is half-solved"--Charles Kettering. As a UX designer, I spend most of my time to understand the users and their needs. I keep asking myself "why?" again and again with multiple user research methods since I need to understand the fundamental principles and reasons behind those needs. Therefore, I can breakdown all the problems into these most basic truths, and use them to create new solutions outside the box. </p>
+		</div>
+		<div class="intern">
+		   <p>As an international student at Uppsala University, I learned from Swedish design philosophy : Logam, which means “Just the right amount”. It inspires me to practice reasonable designs to create continuous and delightful digital experiences. </p>
+		   <p>Looking for a UX design internship position in Sweden for Summer 2022. But we can also talk about UX Design/ Photography/ Architecture/ Travel/ Fashion/ Cooking/...(Or join me to find the best restaurant in the city!)</p>
+		 </div>
+		</div>
+	    <div class="contact" >
+			<div>
+		  <p>You can find me here physically:</p>
+		  <p>Now-04.2022  Ann Arbor, MI    USA</p>
+		  <p>05.2022-TBD  Bay Area, CA     USA</p>
+	    	<i class="fa-solid fa-square-envelope"></i>
+	    	<p>Email: ryanliux@umich.edu </p>
+	     	<i class="fa-brands fa-linkedin"></i>
+			<a href="https://www.linkedin.com/in/dld1">Linkedin</a>
+	   </div>
+		<form action="https://formspree.io/f/xayvbbaz"
+			  method="POST">
+			<fieldset>
+				<legend>Send me a message</legend>
+				<label for="fullname">Name:</label>
+				<input  name=“fullname” type="text" id="fullname" placeholder="Enter Your Name"  required>
+
+				<label for="email">Email:</label>
+				<input name=“email” type="email" id="email" placeholder="Enter Your Email"  required>
+
+
+				<label for="phone">Phone Number:</label>
+				<input name=“phone” type="tel" id="phone"placeholder="123-456-7890"  required>
+				
+
+
+				<label for="message">Leave me a message:</label>
+				<textarea name=“message” id="message" placeholder="What would you tell or ask you?"  required></textarea>
+
+				<!-- <label for="remember_me">Remember me:</label>
+				<input name=“remember_me” type="checkbox" id="remember_me">
+				 -->
+
+				<input type="submit" value="Sumbit"> 
+			</div>
+			</fieldset>
+		</form>
+</body>
+<script>
+	const menu = document.querySelector(".menu");
+	const menuItems = document.querySelectorAll(".menuItem");
+	const hamburger= document.querySelector(".hamburger");
+	const closeIcon= document.querySelector(".closeIcon");
+	const menuIcon = document.querySelector(".menuIcon");
+	
+	function toggleMenu() {
+	  if (menu.classList.contains("showMenu")) {
+		menu.classList.remove("showMenu");
+		closeIcon.style.display = "none";
+		menuIcon.style.display = "block";
+	  } else {
+		menu.classList.add("showMenu");
+		closeIcon.style.display = "block";
+		menuIcon.style.display = "none";
+	  }
+	}
+	
+	hamburger.addEventListener("click", toggleMenu);
+	
+	menuItems.forEach( 
+	  function(menuItem) { 
+		menuItem.addEventListener("click", toggleMenu);
+	  }
+	)</script>
+	</main>
+
+<!-- Footer is a sematic tag page that aids readability -->
+<footer>
+	<p>Dong Liu Design &copy; 2022</p>
+	<p>All rights and wrongs reserved.</p>
+</footer>
+</body>
+</html>

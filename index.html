@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+	<!-- You do not need to make any changes to this file, but
+	you should still review the tags to make sure that you
+	are familiar with them. -->
+
+<html lang="en" class="home">
+<!-- All of the meta data for the page belongs in the header tag -->
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Link to the favicon image -->
+	<link rel="icon" href="images/favicon.ico">
+	<!-- Link to the reset file -->
+	<link rel="stylesheet" href="css/html5reset.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Questrial">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-4TBZT9PVB2">
+	</script>
+	<script>window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'G-4TBZT9PVB2');</script>
+	<title>Dong Liu Design</title>
+	</head>
+
+<!-- All of the visible code in the page belongs in the body tag -->
+<body>
+	<!-- Header is a sematic tag page that aids readability -->
+	<a class="skip" href="#main">Skip to Main Content</a>
+	<header>
+		<!-- Nav is a sematic tag page that aids accessibility -->
+		<nav>
+			<ul class="menu">
+				<li class="active menuItem"><a href="index.html">About Me</a></li>
+				<li class="menuItem"><a href="createdbyme.html">Created By Me</a></li>
+				<li class="menuItem"><a href="bookcover.html">Literati</a></li>
+				<li class="menuItem"><a href="photography.html">Photography</a></li>
+				<li class="menuItem"><a href="findme.html">Find Me</a></li>
+			</ul>	
+			<ul class="navibar">
+				<li class="activenavibar" ><a href="index.html">About Me</a></li>
+				<li><a href="createdbyme.html">Created By Me</a></li>
+				<li><a href="bookcover.html">Literati</a></li>
+				<li><a href="photography.html">Photography</a></li>
+				<li><a href="findme.html">Find Me</a></li>
+			</ul>
+		</nav>
+		<button class="hamburger">
+			<i class="menuIcon material-icons">menu</i>
+			<i class="closeIcon material-icons">close</i>
+		</button>
+		<!-- The h1 is a semantic tag that aids accessibility -->
+		<h1>
+			<div class=" parallax">
+			<span class="seawindow">
+			<ul>
+				<li>Hej </li>
+				<li>Hello </li>
+				<li>I'm DONG LIU </li>
+				<li>WELCOME TO DLD</li>
+			</ul>
+		</span>
+		<ul >
+		</div>
+		</h1>
+
+	</header>
+
+	<!-- Every page should have a main tag for accessibility -->
+	<main id="main">
+		<div  class="intro">
+		    <img id="animation" src="images/me.jpg" alt="me " width="200"  />
+			<div class="education">
+				<p>Education:</p>
+				<ul>
+					<li>UNIVERSITY OF MICHIGAN
+					<li />
+					<li>08.2021-04.2022</li>
+					<li>BSI UX Design (exchange)</li>
+				</ul>
+
+				<ul>
+					<li>UPPSALA UNIVERSITY</li>
+					<li>08.2019-06.2022</li>
+					<li>BA Game Design</li>
+				</ul>
+			</div>
+		</div>
+       
+		<div class="discrip1 ">
+
+			<p class="discrip">I'm Dong Liu (He/him/his). Currently, I'm studying UX design at University of Michigan’s School of Information as an exchange student from Uppsala University (Sweden) where I study Game Design.</p>
+			<p class="discrip">I'm passionate about creating pleasurable digital experiences to make life easier. Therefore, I started my journey to experience different cultures and expand my understanding of users and the world. In the past 5 years, I lived in 4 countries on 3 continents. I believe the global vision I gained from both eastern and western culture can enrich my creativity to solve global issues with other aspiring individuals.</pid="1">
+			<p class="discrip">Looking forward to applying my knowledge and skills to UX Design in related fields. </p>
+			</div>
+		<div class="discrip2 ">
+			<p class="discrip">In Summer 2021, I practiced my skills with real-world problems as a product management intern at OPPO + OnePlus Group (a Chinese smartphone company). During the internship, I collaborated with co-workers all over the world, which helped me to develop cross-cultural communication skills. Meanwhile I also gained PRD writing, usability testing and prototyping skills through working across the entire product lifecycle with Google to design realmeUI for pad (an Android custom ROM). At the same time, I created the wireframes of the new feature “Scene” for realme Link 2.0 which had about 400,000 weekly active users, and ColorOS 12 ’s control widget for IoT devices which was used by 500 Million global users monthly.</p>
+		</div>
+		<script>
+			const menu = document.querySelector(".menu");
+			const menuItems = document.querySelectorAll(".menuItem");
+			const hamburger= document.querySelector(".hamburger");
+			const closeIcon= document.querySelector(".closeIcon");
+			const menuIcon = document.querySelector(".menuIcon");
+			
+			function toggleMenu() {
+			  if (menu.classList.contains("showMenu")) {
+				menu.classList.remove("showMenu");
+				closeIcon.style.display = "none";
+				menuIcon.style.display = "block";
+			  } else {
+				menu.classList.add("showMenu");
+				closeIcon.style.display = "block";
+				menuIcon.style.display = "none";
+			  }
+			}
+			
+			hamburger.addEventListener("click", toggleMenu);
+			
+			menuItems.forEach( 
+			  function(menuItem) { 
+				menuItem.addEventListener("click", toggleMenu);
+			  }
+			)</script>
+	</main>
+
+	<!-- Footer is a sematic tag page that aids readability -->
+	<footer>
+		<p>Dong Liu Design &copy; 2022</p>
+		<p>All rights and wrongs reserved.</p>
+	</footer>
+</body>
+</html>

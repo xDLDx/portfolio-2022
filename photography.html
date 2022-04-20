@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+	<!-- You do not need to make any changes to this file, but
+	you should still review the tags to make sure that you
+	are familiar with them. -->
+
+<html lang="en" class="playce">
+
+<!-- All of the meta data for the page belongs in the header tag -->
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Link to the favicon image -->
+	<link rel="icon" href="images/favicon.ico">
+	<!-- Link to the reset file -->
+	<link rel="stylesheet" href="css/html5reset.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Questrial">
+	<title>Playce</title>
+        
+</head>
+
+<!-- All of the visible code in the page belongs in the body tag -->
+<body>
+	<!-- Header is a sematic tag page that aids readability -->
+	<a class="skip" href="#main">Skip to Main Content</a>
+	<header>
+		<!-- Nav is a sematic tag page that aids accessibility -->
+		<nav>
+			<ul class="menu">
+				<li class="menuItem"><a href="index.html">About Me</a></li>
+				<li class="menuItem"><a href="createdbyme.html">Created By Me</a></li>
+				<li class="menuItem"><a href="bookcover.html">Literati</a></li>
+				<li class="active menuItem"><a href="photography.html">Photography</a></li>
+				<li class="menuItem"><a href="findme.html">Find Me</a></li>
+			</ul>	
+			<ul class="navibar">
+				<li ><a href="index.html">About Me</a></li>
+				<li><a href="createdbyme.html">Created By Me</a></li>
+				<li><a href="bookcover.html">Literati</a></li>
+				<li class="activenavibar"><a href="photography.html">Photography</a></li>
+				<li><a href="findme.html">Find Me</a></li>
+		</nav>
+		<button class="hamburger">
+			<i class="menuIcon material-icons">menu</i>
+			<i class="closeIcon material-icons">close</i>
+		</button>
+		<!-- The h1 is a semantic tag that aids accessibility -->
+		<h1 id="main">Photography</h1>
+	</header>
+
+	<!-- Every page should have a main tag for accessibility -->
+	<main>
+		    <div class="grid1">
+			
+			<img src="images/seaside-fishman.jpg" alt="a fishman standing by seaside" width="200" />
+		   </div>
+		<div class="grid2">
+			
+			<img src="images/seaside-girl.JPG" alt="a girl in front of the sea" width="200" />
+            
+		</div>
+		<div class="grid3">
+			
+			<img src="images/museum.jpg" alt="two guests in museum" width="200" />
+			
+		</div>
+
+		<div class="grid4">
+			
+			<img src="images/chicago.JPG" alt="two buildings in chicago" width="200" />
+			
+		</div>
+		<div class="grid5">
+			
+			<img src="images/sunset-sea-boy.jpg" alt="boy with blue jacket near the sea" width="200" />
+
+		</div>
+		<div class="grid6">
+			
+			<img src="images/sunset-bridge.jpg" alt="golden bridge in sunset" width="200" />
+
+		</div>
+		<div class="grid7">
+			
+			<img src="images/sunset-boy.jpg" alt="boy in sunset" width="200" />
+	
+		</div>
+		<div class="grid8">
+			
+			<img src="images/fine-art.JPG" alt="fine art palace" width="200" />
+		
+		</div>
+		<div class="grid9">
+			
+			<img src="images/the-hauge.jpg" alt="a building in the Hague" width="200" />
+		
+		</div>
+		<div class="grid10">
+			
+			<img  src="images/seaside-walking.png" alt="playce with spotify logo" width="200" />
+		
+		</div>
+		<script>
+			const menu = document.querySelector(".menu");
+			const menuItems = document.querySelectorAll(".menuItem");
+			const hamburger= document.querySelector(".hamburger");
+			const closeIcon= document.querySelector(".closeIcon");
+			const menuIcon = document.querySelector(".menuIcon");
+			
+			function toggleMenu() {
+			  if (menu.classList.contains("showMenu")) {
+				menu.classList.remove("showMenu");
+				closeIcon.style.display = "none";
+				menuIcon.style.display = "block";
+			  } else {
+				menu.classList.add("showMenu");
+				closeIcon.style.display = "block";
+				menuIcon.style.display = "none";
+			  }
+			}
+			
+			hamburger.addEventListener("click", toggleMenu);
+			
+			menuItems.forEach( 
+			  function(menuItem) { 
+				menuItem.addEventListener("click", toggleMenu);
+			  }
+			)</script>
+	</main>
+
+	<!-- Footer is a sematic tag page that aids readability -->
+	<footer>
+		<p>Dong Liu Design &copy; 2022</p>
+		<p>All rights and wrongs reserved.</p>
+	</footer>
+
+</body>
+</html>

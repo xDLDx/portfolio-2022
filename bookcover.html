@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+	<!-- You do not need to make any changes to this file, but
+	you should still review the tags to make sure that you
+	are familiar with them. -->
+
+<html lang="en" class="book">
+<!-- All of the meta data for the page belongs in the header tag -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to the favicon image -->
+    <link rel="icon" href="images/favicon.ico">
+    <!-- Link to the reset file -->
+    <link rel="stylesheet" href="css/html5reset.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Questrial">
+    <title>Don't Judge A Book Only By Its Cover</title>
+</head>
+
+<!-- All of the visible code in the page belongs in the body tag -->
+<body>
+    <!-- Header is a sematic tag page that aids readability -->
+    <a class="skip" href="#main">Skip to Main Content</a>
+    <header>
+        <!-- Nav is a sematic tag page that aids accessibility -->
+        <nav>
+            <ul class="menu">
+				<li class="menuItem"><a href="index.html">About Me</a></li>
+				<li class="menuItem"><a href="createdbyme.html">Created By Me</a></li>
+				<li class="active menuItem"><a href="bookcover.html">Literati</a></li>
+				<li class="menuItem"><a href="photography.html">Photography</a></li>
+				<li class="menuItem"><a href="findme.html">Find Me</a></li>
+			</ul>	
+			<ul class="navibar">
+				<li><a href="index.html">About Me</a></li>
+				<li><a href="createdbyme.html">Created By Me</a></li>
+				<li  class="activenavibar" ><a href="bookcover.html">Literati</a></li>
+				<li><a href="photography.html">Photography</a></li>
+				<li><a href="findme.html">Find Me</a></li>
+        </nav>
+        <button class="hamburger">
+			<i class="menuIcon material-icons">menu</i>
+			<i class="closeIcon material-icons">close</i>
+		</button>
+        <!-- The h1 is a semantic tag that aids accessibility -->
+        <h1 id="main">Don't Judge A Book Only By Its Cover</h1>
+        
+    </header>
+
+    <!-- Every page should have a main tag for accessibility -->
+    <main id="main">
+        <div class="cover">
+            <img src="images/bookstorecoverpage.png" alt="A web on a mac and an iphone"  />
+        </div>
+
+    <div class="bcmain">
+        
+        <div class="bccontent">
+          
+            <div>
+            <img src="images/browsingsystem.png" alt="book images without text below"  />
+           
+            <p>Inefficient Browsing System-The cover-based browsing system can barely provide useful information to help users understand what a book is about. </p>
+            </div>
+
+            <div>
+            <img src="images/tiringreading.png" alt="extremely crowded text" />
+           
+            <p> Tiring Reading Experience-Unclear area divison/ Confusing font choices /The content width is too long</p>
+            </div>
+           
+            <div>
+                <img src="images/newbrowsingsystem.png" alt="book image with short introduction" width="200" />
+               
+                <p>1. Content-based Browsing System -Use phases instead of covers to help users to find their dream books based on content. </p>
+            </div>
+            <div>
+                <img src="images/customizedreading.png" alt="introduction with three buttons to customize it" width="200" />
+               
+                <p>2. Customizable Reading Experience - Users can adjust the content size based on their reading habits. </p>
+            </div>
+            <div>
+                <img src="images/comfortablereading.png" alt="clear and comfortable text" width="200" />
+               
+                <p>3. Consistent and Comfortable Reading Experience - Keep content’s fonts and width easier for users to read.</p>
+            </div>
+            <div>
+                <img src="images/cleardivision.png" alt="webpage with clear division" width="200" />
+               
+                <p>4. Clear Area Division -Add more breath areas to help users find different sections.</p>
+            </div>
+            <div>
+                <img src="images/litibar.png" alt="mini menu on the side of the screen" width="200" />
+               
+                <p>5. Liti Bar-Users can go to different pages without going back to the top of the page.</p>
+            </div>
+            <div>
+                <img src="images/loadingpage.png" alt="Newton’s cradle loading page " width="200" />
+               
+                <p>6. Loading Page->Animation of Newton’s cradle and bookstore’s opening hours are shown on the page</p>
+            </div>
+            <div>
+                <img src="images/404page.png" alt="404 page with quote" width="200" />
+               
+                <p>7. 404 Page-A quote about failure is included, which can bring users to the product page of its book.</p>
+            </div>
+            <div>
+                <img src="images/mobilepages.png" alt="mobile version of the website" width="200" />
+               
+                <p>8. Mobile Friendly- Most buttons are located at the bottom of the page, which is convenient for one-handed operation.</p>
+            </div>
+    
+        </div>
+        
+    </div>
+    <script>
+        const menu = document.querySelector(".menu");
+        const menuItems = document.querySelectorAll(".menuItem");
+        const hamburger= document.querySelector(".hamburger");
+        const closeIcon= document.querySelector(".closeIcon");
+        const menuIcon = document.querySelector(".menuIcon");
+        
+        function toggleMenu() {
+          if (menu.classList.contains("showMenu")) {
+            menu.classList.remove("showMenu");
+            closeIcon.style.display = "none";
+            menuIcon.style.display = "block";
+          } else {
+            menu.classList.add("showMenu");
+            closeIcon.style.display = "block";
+            menuIcon.style.display = "none";
+          }
+        }
+        
+        hamburger.addEventListener("click", toggleMenu);
+        
+        menuItems.forEach( 
+          function(menuItem) { 
+            menuItem.addEventListener("click", toggleMenu);
+          }
+        )</script>
+
+    </main>
+
+    <!-- Footer is a sematic tag page that aids readability -->
+    <footer>
+        <p>Dong Liu Design &copy; 2022</p>
+        <p>All rights and wrongs reserved.</p>
+    </footer>
+</body>
+</html>
